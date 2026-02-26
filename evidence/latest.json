@@ -1,0 +1,170 @@
+{
+  "executed_at_utc": "2026-10-24T17:49:38.127126+00:00",
+  "environment": "Docker Linux containers; synthetic faults",
+  "scenarios": [
+    {
+      "scenario": "configuration",
+      "baseline": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "injection": {
+        "code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "failure": {
+        "code": 0,
+        "stdout": "{\"status\": \"unhealthy\", \"error\": \"invalid message configuration\"}\n503",
+        "stderr": ""
+      },
+      "diagnostics": {
+        "container": {
+          "code": 0,
+          "stdout": "{\"Status\":\"running\",\"Running\":true,\"Paused\":false,\"Restarting\":false,\"OOMKilled\":false,\"Dead\":false,\"Pid\":366451,\"ExitCode\":0,\"Error\":\"\",\"StartedAt\":\"2026-10-24T17:49:24.263261553Z\",\"FinishedAt\":\"0001-01-01T00:00:00Z\"}",
+          "stderr": ""
+        },
+        "logs": {
+          "code": 0,
+          "stdout": "",
+          "stderr": "127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -"
+        },
+        "filesystem": {
+          "code": 0,
+          "stdout": "Filesystem                Size      Used Available Use% Mounted on\ntmpfs                     1.0M      4.0K   1020.0K   0% /var/lib/lab\ntotal 4\n-rw-r--r--    1 0        0               20 Oct 24 17:49 config.json\n{\"message\":\"broken\"}",
+          "stderr": ""
+        }
+      },
+      "recovered": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "elapsed_seconds": 0.236
+    },
+    {
+      "scenario": "permissions",
+      "baseline": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "injection": {
+        "code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "failure": {
+        "code": 0,
+        "stdout": "{\"status\": \"unhealthy\", \"error\": \"[Errno 13] Permission denied: '/etc/lab/config.json'\"}\n503",
+        "stderr": ""
+      },
+      "diagnostics": {
+        "container": {
+          "code": 0,
+          "stdout": "{\"Status\":\"running\",\"Running\":true,\"Paused\":false,\"Restarting\":false,\"OOMKilled\":false,\"Dead\":false,\"Pid\":366451,\"ExitCode\":0,\"Error\":\"\",\"StartedAt\":\"2026-10-24T17:49:24.263261553Z\",\"FinishedAt\":\"0001-01-01T00:00:00Z\"}",
+          "stderr": ""
+        },
+        "logs": {
+          "code": 0,
+          "stdout": "",
+          "stderr": "127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -"
+        },
+        "filesystem": {
+          "code": 0,
+          "stdout": "Filesystem                Size      Used Available Use% Mounted on\ntmpfs                     1.0M      4.0K   1020.0K   0% /var/lib/lab\ntotal 4\n-rw-------    1 0        0               19 Oct 24 17:49 config.json\n{\"message\":\"ready\"}",
+          "stderr": ""
+        }
+      },
+      "recovered": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "elapsed_seconds": 0.243
+    },
+    {
+      "scenario": "storage",
+      "baseline": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "injection": {
+        "code": 1,
+        "stdout": "",
+        "stderr": "dd: error writing '/var/lib/lab/fill': No space left on device\n257+0 records in\n256+0 records out\n1048576 bytes (1.0MB) copied, 0.000656 seconds, 1.5GB/s"
+      },
+      "failure": {
+        "code": 0,
+        "stdout": "{\"status\": \"unhealthy\", \"error\": \"[Errno 28] No space left on device\"}\n503",
+        "stderr": ""
+      },
+      "diagnostics": {
+        "container": {
+          "code": 0,
+          "stdout": "{\"Status\":\"running\",\"Running\":true,\"Paused\":false,\"Restarting\":false,\"OOMKilled\":false,\"Dead\":false,\"Pid\":366451,\"ExitCode\":0,\"Error\":\"\",\"StartedAt\":\"2026-10-24T17:49:24.263261553Z\",\"FinishedAt\":\"0001-01-01T00:00:00Z\"}",
+          "stderr": ""
+        },
+        "logs": {
+          "code": 0,
+          "stdout": "",
+          "stderr": "127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -"
+        },
+        "filesystem": {
+          "code": 0,
+          "stdout": "Filesystem                Size      Used Available Use% Mounted on\ntmpfs                     1.0M      1.0M         0 100% /var/lib/lab\ntotal 4\n-rw-r--r--    1 0        0               19 Oct 24 17:49 config.json\n{\"message\":\"ready\"}",
+          "stderr": ""
+        }
+      },
+      "recovered": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "elapsed_seconds": 0.224
+    },
+    {
+      "scenario": "service",
+      "baseline": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "injection": {
+        "code": 0,
+        "stdout": "linux-recovery-lab-node",
+        "stderr": ""
+      },
+      "failure": {
+        "code": 1,
+        "stdout": "",
+        "stderr": "Error response from daemon: container adb37e0761f3c08ca547f80efca4d94ceff9073d859d6daa81ffd5f985942ddc is not running"
+      },
+      "diagnostics": {
+        "container": {
+          "code": 0,
+          "stdout": "{\"Status\":\"exited\",\"Running\":false,\"Paused\":false,\"Restarting\":false,\"OOMKilled\":false,\"Dead\":false,\"Pid\":0,\"ExitCode\":137,\"Error\":\"\",\"StartedAt\":\"2026-10-24T17:49:24.263261553Z\",\"FinishedAt\":\"2026-10-24T17:49:32.050949094Z\"}",
+          "stderr": ""
+        },
+        "logs": {
+          "code": 0,
+          "stdout": "",
+          "stderr": "127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 503 -\n127.0.0.1 - - [24/Oct/2026 17:49:30] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Oct/2026 17:49:31] \"GET / HTTP/1.1\" 200 -"
+        },
+        "filesystem": {
+          "code": 1,
+          "stdout": "",
+          "stderr": "Error response from daemon: container adb37e0761f3c08ca547f80efca4d94ceff9073d859d6daa81ffd5f985942ddc is not running"
+        }
+      },
+      "recovered": {
+        "code": 0,
+        "stdout": "{\"status\": \"healthy\"}\n200",
+        "stderr": ""
+      },
+      "elapsed_seconds": 7.117
+    }
+  ]
+}
