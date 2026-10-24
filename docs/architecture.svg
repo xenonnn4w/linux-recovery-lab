@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120"><rect width="1600" height="1120" fill="white"/>
+<text x="800" y="70" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="38" font-weight="700" fill="#102b52">Linux Recovery Lab</text>
+<text x="800" y="108" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="23" font-weight="400" fill="#102b52">Deployment, fault injection, diagnosis and verified recovery</text>
+<rect x="25" y="140" width="1550" height="180" rx="4" fill="#eef6ff" stroke="#3575a5" stroke-width="2"/>
+<text x="800.0" y="174" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Host — Python orchestration</text>
+<rect x="55" y="195" width="350" height="100" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="230.0" y="229" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">CLI · lab.py</text>
+<text x="230.0" y="261" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">up  /  check  /  test  /  down</text>
+<rect x="465" y="195" width="550" height="100" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="740.0" y="229" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Scenario controller</text>
+<text x="740.0" y="261" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Healthy baseline  &gt;  inject  &gt;  diagnose  &gt;  repair</text>
+<rect x="1075" y="195" width="465" height="100" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="1307.5" y="229" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Docker Engine</text>
+<text x="1307.5" y="261" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Build image · exec · stop/start · remove</text>
+<polyline points="405,245 465,245" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="465,245 453.2941876694152,250.654551943446 453.2941876694152,239.345448056554" fill="#17529a"/>
+<polyline points="1015,245 1075,245" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="1075,245 1063.2941876694151,250.654551943446 1063.2941876694151,239.345448056554" fill="#17529a"/>
+<polyline points="1310,320 1310,365 800,365 800,410" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="800,410 794.345448056554,398.2941876694152 805.654551943446,398.2941876694152" fill="#17529a"/>
+<text x="1040" y="353" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Docker lifecycle + exec commands</text>
+<rect x="25" y="410" width="1030" height="390" rx="4" fill="#fff5e3" stroke="#ca8a26" stroke-width="2"/>
+<text x="540.0" y="444" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Isolated Linux container · linux-recovery-lab-node</text>
+<rect x="55" y="475" width="420" height="130" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="265.0" y="509" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">HTTP service · service.py</text>
+<text x="265.0" y="541" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Python HTTP server · port 8080</text>
+<text x="265.0" y="570" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Runs as UID 10001</text>
+<text x="265.0" y="599" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">200 healthy / 503 diagnostic error</text>
+<rect x="535" y="475" width="485" height="130" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="777.5" y="509" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Ephemeral configuration</text>
+<text x="777.5" y="541" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">/etc/lab/config.json</text>
+<text x="777.5" y="570" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">1 MiB tmpfs · expected message: ready</text>
+<text x="777.5" y="599" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Faults: invalid value / chmod 600</text>
+<polyline points="475,530 535,530" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="535,530 523.2941876694152,535.654551943446 523.2941876694152,524.345448056554" fill="#17529a"/>
+<text x="505" y="511" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="16" font-weight="400" fill="#102b52">Read</text>
+<rect x="535" y="650" width="485" height="115" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="777.5" y="684" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Bounded writable storage</text>
+<text x="777.5" y="716" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">/var/lib/lab/probe · 1 MiB tmpfs</text>
+<text x="777.5" y="745" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Fault: fill tmpfs  &gt;  ENOSPC</text>
+<polyline points="265,605 265,628 505,628 505,708 535,708" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="535,708 523.2941876694152,713.654551943446 523.2941876694152,702.345448056554" fill="#17529a"/>
+<text x="690" y="629" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="16" font-weight="400" fill="#102b52">Write health marker</text>
+<rect x="55" y="650" width="420" height="115" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="265.0" y="684" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Health probe via docker exec</text>
+<text x="265.0" y="716" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">curl  &gt;  127.0.0.1:8080</text>
+<text x="265.0" y="745" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">No published host port</text>
+<polyline points="155,650 155,605" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="155,605 160.654551943446,616.7058123305848 149.345448056554,616.7058123305848" fill="#17529a"/>
+<rect x="1100" y="410" width="475" height="180" rx="4" fill="#e8f8eb" stroke="#469250" stroke-width="2"/>
+<text x="1337.5" y="444" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Collected diagnostics</text>
+<text x="1337.5" y="476" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">HTTP response and error text</text>
+<text x="1337.5" y="505" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Container state + recent logs</text>
+<text x="1337.5" y="534" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">df · numeric permissions · config</text>
+<rect x="1100" y="625" width="475" height="175" rx="4" fill="#e8f8eb" stroke="#469250" stroke-width="2"/>
+<text x="1337.5" y="659" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Recovery actions</text>
+<text x="1337.5" y="691" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Restore valid JSON / read permission</text>
+<text x="1337.5" y="720" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Remove tmpfs filler file</text>
+<text x="1337.5" y="749" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Restart + reprovision configuration</text>
+<polyline points="1055,530 1100,530" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="1100,530 1088.2941876694151,535.654551943446 1088.2941876694151,524.345448056554" fill="#17529a"/>
+<polyline points="1100,710 1055,710" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="1055,710 1066.7058123305849,704.345448056554 1066.7058123305849,715.654551943446" fill="#17529a"/>
+<rect x="25" y="840" width="1550" height="115" rx="4" fill="#f1edff" stroke="#886ac5" stroke-width="2"/>
+<text x="800.0" y="874" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Verification + evidence</text>
+<text x="800.0" y="906" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Each of 4 scenarios: healthy baseline  &gt;  expected failure  &gt;  healthy HTTP 200</text>
+<text x="800.0" y="935" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">evidence/latest.json: timestamp, fault, diagnostics, recovery and elapsed time</text>
+<polyline points="780,800 780,840" fill="none" stroke="#886ac5" stroke-width="3"/>
+<polygon points="780,840 774.345448056554,828.2941876694152 785.654551943446,828.2941876694152" fill="#886ac5"/>
+<rect x="25" y="990" width="1550" height="95" rx="4" fill="#f6f8fb" stroke="#3575a5" stroke-width="2"/>
+<text x="800.0" y="1023" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="21" font-weight="700" fill="#102b52">Isolation and cleanup</text>
+<text x="800.0" y="1056" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Read-only root · network none · capabilities dropped · resource limits · no host mounts</text>
+<text x="800.0" y="1085" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Remove labeled lab container in finally; tmpfs contents are ephemeral</text></svg>

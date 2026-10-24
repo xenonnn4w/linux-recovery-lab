@@ -2,6 +2,12 @@
 
 Deploy a small Linux HTTP service, inject operational faults, collect diagnostics, and verify recovery.
 
+## Architecture
+
+![System architecture](docs/architecture.png)
+
+[Editable SVG](docs/architecture.svg)
+
 ## Run
 
 Requires Python 3.10+ and a working Docker Engine. The first run downloads an Alpine-based Python image and builds a local image.
