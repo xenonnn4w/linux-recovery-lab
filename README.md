@@ -4,9 +4,8 @@ Deploy a small Linux HTTP service, inject operational faults, collect diagnostic
 
 ## Architecture
 
-![System architecture](docs/architecture.png)
+![System architecture](docs/architecture.svg)
 
-[Editable SVG](docs/architecture.svg)
 
 ## Run
 
